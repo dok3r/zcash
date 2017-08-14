@@ -5,7 +5,8 @@ ENV	ZCASH_URL=https://github.com/zcash/zcash.git \
 	ZCASH_VERSION=v1.0.10-1 \
 	ZCASH_CONF=/home/zcash/.zcash/zcash.conf
 
-RUN apt-get autoclean && apt-get autoremove && apt-get update && \
+RUN mkdir -p /var/cache/apt/archives/ && \
+    apt-get autoclean && apt-get autoremove && apt-get update && \
     apt-get -qqy install --no-install-recommends sudo apt-transport-https  \
     ca-certificates wget pwgen && \
     (wget -qO - https://apt.z.cash/zcash.asc | apt-key add -) && \
