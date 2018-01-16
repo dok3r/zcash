@@ -2,7 +2,7 @@ FROM debian:jessie
 MAINTAINER kost - https://github.com/kost
 
 ENV	ZCASH_URL=https://github.com/zcash/zcash.git \
-	ZCASH_VERSION=v1.0.10-1 \
+	ZCASH_VERSION=v1.0.14 \
 	ZCASH_CONF=/home/zcash/.zcash/zcash.conf
 
 RUN mkdir -p /var/cache/apt/archives/ /var/cache/apt/archives/partial/ && \
